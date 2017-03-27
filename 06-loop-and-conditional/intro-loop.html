@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+
+  <div id="js-app">
+    <p>Items</p>
+    <ul v-if="items.length">
+      <li v-for="item in items">{{ item }}</li>
+    </ul>
+
+    <p>Items with index</p>
+    <ul v-if="items.length">
+      <li v-for="(item, idx) in items">{{ item }} ({{ idx }})</li>
+    </ul>
+
+    <p>Only even Items</p>
+    <ul v-if="items.length">
+      <li v-for="(item, idx) in items" v-if="idx % 2 === 0">{{ item }} ({{ idx }})</li>
+    </ul>
+
+    <p>Keep Tracking List Item with storing key attribute</p>
+    <ul v-if="items.length">
+      <li v-for="(item, idx) in items" v-bind:key="item">{{ item }} ({{ idx }})</li>
+    </ul>
+
+    <p>Persons</p>
+    <ul v-if="persons.length">
+      <li v-for="person in persons">Name: {{ person.name }}. Age: {{ person.age }}</li>
+    </ul>
+
+    <p>Persons Obj Loop</p>
+    <ul v-if="persons.length">
+      <li v-for="person in persons">
+        <div v-for="(value, key, idx) in person">{{ key | capitalize(idx % 2 == 0 ? true : false ) }}: {{ value }}</div>
+      </li>
+    </ul>
+
+    <p>Persons Obj Loop with Index</p>
+    <ul v-if="persons.length">
+      <li v-for="(person, idx) in persons">
+        <strong>{{ idx }}</strong>
+        <div v-for="(value, key, idx2) in person">{{ capitalize(key) }}: {{ value }} ({{ idx2 }})</div>
+      </li>
+    </ul>
+
+    <p>Loop through number</p>
+    <ul v-if="numbers > 0">
+      <li v-for="number in numbers">{{ number }}</li>
+    </ul>
+
+    <p>Nested loops</p>
+    <ul>
+      <li v-for="(val, ky) in nestedObj">
+        <template v-if="isThisArr(val)">
+          <div v-for="item in val">{{ item }}</div>
+        </template>
+        <template v-else>
+          {{ val }}
+        </template>
+      </li>
+    </ul>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="intro-loop.js"></script>
+</body>
+</html>

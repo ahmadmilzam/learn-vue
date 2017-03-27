@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+
+  <div id="js-app">
+    <h2 ref="heading">{{ title }}</h2>
+    <button v-on:click="show" ref="buttonShow">Show Paragraph</button>
+    <p v-if="showParagraph">This is not always visible</p>
+  </div>
+
+  <div id="js-app2">
+    <h2 ref="heading">{{ title }}</h2>
+    <button v-on:click="updateTitle('New title for VM1')">Change vm1 title</button>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

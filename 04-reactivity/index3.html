@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+</head>
+<body>
+
+  <div id="js-app">
+    <button v-on:click="counter++">Increase!</button>
+    <button v-on:click="counter--">Decrease!</button>
+    ||
+    <button v-on:click="secondCounter++">Increase Second!</button>
+    <button v-on:click="secondCounter--">Decrease Second!</button>
+    <br>
+    <p>First Counter: {{ counter }}</p>
+    <p>First Counter Result: {{ firstResult }}</p>
+    <p>Second Counter:  {{ secondCounter }}</p>
+    <p>Second Counter Result: {{ secondResult }}</p>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="app3.js"></script>
+</body>
+</html>

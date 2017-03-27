@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+
+  <div id="js-app">
+    <p v-if="show">You can see me!</p>
+    <p v-else>He's gone! You can see me now!</p>
+    <p v-show="show">Im still in the DOM</p>
+    <p>Always visible</p>
+    <button @click="toggleShow">Toggle Show</button>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="intro-conditional.js"></script>
+</body>
+</html>

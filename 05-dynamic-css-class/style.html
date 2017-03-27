@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+  <style type="text/css">
+    .demo {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      background-color: #ddd;
+      margin: 10px;
+    }
+    .gray {
+      background-color: #ccc;
+    }
+    .red {
+      background-color: red;
+    }
+    .aqua {
+      background-color: aqua;
+    }
+    .blue {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="js-app">
+    <div class="demo" :style="{backgroundColor: color}"></div>
+    <div class="demo" :style="myStyle"></div>
+    <div class="demo"></div>
+    <hr>
+    <input type="text" name="color" v-model="color">
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="style.js"></script>
+</body>
+</html>

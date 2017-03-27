@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+</head>
+<body>
+
+  <div id="js-app">
+    <h1 v-once>{{ title }}</h1>
+    <p>{{ sayHello() }}</p>
+    <a v-bind:href="link">Link</a>
+    <div v-html="linkElement"></div>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

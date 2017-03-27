@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+</head>
+<body>
+
+  <div id="js-app">
+    <button v-on:click="clickHandler">Click Me!</button>
+    <button v-on:click="++counter">Click Me 2!</button>
+    <span>{{ counter }}</span>
+    <div v-on:mousemove="updateCoordinates">
+      Coordinate: {{ x }} / {{ y }}
+      -
+      <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </div>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

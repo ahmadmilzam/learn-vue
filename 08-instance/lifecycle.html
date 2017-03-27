@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+
+  <div id="js-app">
+    <h1 ref="heading">{{ title }}</h1>
+    <button type="button" @click="title = 'New Title'">Update Title</button>
+    <br>
+    <button type="button" @click="destroy">Destroy Instance</button>
+    <br>
+    <!-- <button type="button" @click="title = 'New Title'">Update Title</button> -->
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="lifecycle.js"></script>
+</body>
+</html>

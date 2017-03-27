@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Vue</title>
+  <style type="text/css">
+    .demo {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+      margin: 10px;
+    }
+
+    .red {
+      background-color: red;
+    }
+    .aqua {
+      background-color: aqua;
+    }
+    .blue {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="js-app">
+    <div
+      class="demo"
+      @click="attachedRed = !attachedRed"
+      :class="divClasses"></div>
+    <div class="demo" :class="{red: attachedRed}"></div>
+    <div class="demo" :class="[color, {red: attachedRed}]"></div>
+    <hr>
+    <input type="text" name="color" v-model="color">
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="name.js"></script>
+</body>
+</html>
